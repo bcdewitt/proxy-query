@@ -1,0 +1,45 @@
+{
+  "name": "proxy-query",
+  "description": "With updates to Web APIs like `.querySelector()` and new JavaScript syntax improvements, I felt that the core functionality of jQuery could now be recreated using native browser code - the only thing missing was the [composite design pattern](https://en.wikipedia.org/wiki/Composite_pattern). After experimenting with ES6 proxies, I felt they could provide the missing piece...and Proxy Query was born.",
+  "author": "Brydon DeWitt",
+  "license": "ISC",
+  "version": "0.1.1",
+  "repository": "github:BDawgonnit/proxy-query",
+  "bugs": "https://github.com/BDawgonnit/proxy-query/issues",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.esm.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "jest -c jest.config.js",
+    "testWatch": "npm test -- --watchAll",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "documentation": "^12.1.1",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.14.1",
+    "eslint-plugin-jsdoc": "^15.8.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "esm": "^3.2.25",
+    "find-project-root": "^1.1.1",
+    "jest": "^24.8.0",
+    "rollup": "^1.19.3",
+    "rollup-jest": "0.0.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-eslint": "^7.0.0"
+  },
+  "files": [
+    "dist",
+    "docs"
+  ]
+}
